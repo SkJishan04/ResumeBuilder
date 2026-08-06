@@ -1,41 +1,71 @@
 from pathlib import Path
-from datetime import datetime
 
+from config import TEMPLATE_DIR, OUTPUT_TEX
 from sections.projects import get_project
-from sections.skills import get_skills
+from sections.skills import get_skill
 
 
-def read_file(path):
-    return Path(path).read_text(encoding="utf8")
+def read_tex(filename):
+    return (TEMPLATE_DIR / filename).read_text(
+        encoding="utf-8"
+    )
 
 
-def build_resume(company, role, p1, p2, skill):
+def build_resume(company, role, project1, project2, skill):
 
-    header = read_file("templates/header.tex")
-    education = read_file("templates/education.tex")
-    experience = read_file("templates/experience.tex")
-    coding = read_file("templates/coding_profiles.tex")
+    template = read_tex("resume_template.tex")
 
-    project1 = get_project(p1)
-    project2 = get_project(p2)
+    template = template.replace(
+        "{{HEADER}}",
+        read_tex("header.tex")
+    )
 
-    skills = get_skills(skill)
+    template = template.replace(
+        "{{EDUCATION}}",
+        read_tex("education.tex")
+    )
 
-    template = read_file("templates/resume_template.tex")
+    template = template.replace(
+        "{{EXPERIENCE}}",
+        read_tex("experience.tex")
+    )
 
-    template = template.replace("{{HEADER}}", header)
-    template = template.replace("{{EDUCATION}}", education)
-    template = template.replace("{{EXPERIENCE}}", experience)
-    template = template.replace("{{CODING}}", coding)
-    template = template.replace("{{PROJECT1}}", project1)
-    template = template.replace("{{PROJECT2}}", project2)
-    template = template.replace("{{SKILLS}}", skills)
+    template = template.replace(
+        "{{CODING_PROFILES}}",
+        read_tex("coding_profiles.tex")
+    )
 
-    output = Path("output/tex")
-    output.mkdir(parents=True, exist_ok=True)
+    template = template.replace(
+        "{{TECHNOLOGIES}}",
+        read_tex("technologies.tex")
+    )
 
-    tex_file = output / "resume.tex"
+    projects = (
+        get_project(project1)
+        + "\n\n"
+        + get_project(project2)
+    )
 
-    tex_file.write_text(template, encoding="utf8")
+    template = template.replace(
+        "{{PROJECTS}}",
+        projects
+    )
 
-    return tex_file
+    template = template.replace(
+        "{{SKILLS}}",
+        get_skill(skill)
+    )
+
+    OUTPUT_TEX.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+    tex_path = OUTPUT_TEX / "resume.tex"
+
+    tex_path.write_text(
+        template,
+        encoding="utf-8"
+    )
+
+    return tex_path
