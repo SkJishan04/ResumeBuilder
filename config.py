@@ -9,4 +9,4 @@ TEMPLATE_DIR = ROOT / "templates"
 OUTPUT_TEX = ROOT / "output" / "tex"
 OUTPUT_PDF = ROOT / "output" / "pdf"
 
-LATEX_COMPILER = "pdflatex"
+LATEX_COMPILER = r"C:\Users\skjis\AppData\Local\Programs\MiKTeX\miktex\bin\x64\pdflatex.exe"
