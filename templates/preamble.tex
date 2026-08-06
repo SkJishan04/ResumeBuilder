@@ -149,3 +149,9 @@
 \let\hrefWithoutArrow\href
 
 % new command for external links:
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
