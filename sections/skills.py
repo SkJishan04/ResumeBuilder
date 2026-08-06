@@ -9,7 +9,7 @@ SKILLS = {
 }
 
 
-def show_skills():
+def show_technologies():
     print("\nAvailable Skill Sets")
     print("-" * 40)
 
@@ -23,7 +23,7 @@ def load_tex(path):
     return Path(path).read_text(encoding="utf-8")
 
 
-def get_skill(choice):
+def get_technology(choice):
 
     match choice:
 

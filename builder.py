@@ -35,10 +35,7 @@ def build_resume(company, role, project1, project2, skill):
         read_tex("coding_profiles.tex")
     )
 
-    template = template.replace(
-        "{{TECHNOLOGIES}}",
-        read_tex("technologies.tex")
-    )
+    
 
     projects = (
         get_project(project1)
@@ -52,9 +49,9 @@ def build_resume(company, role, project1, project2, skill):
     )
 
     template = template.replace(
-        "{{SKILLS}}",
-        get_skill(skill)
-    )
+    "{{TECHNOLOGIES}}",
+    get_skill(skill)
+)
 
     OUTPUT_TEX.mkdir(
         parents=True,
