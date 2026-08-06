@@ -1,34 +1,55 @@
 from builder import build_resume
 from compiler import compile_pdf
 
-company = input("Company Name : ")
-role = input("Job Role / ID : ")
 
-print("\nProjects")
+def main():
+    print("=" * 50)
+    print("        Resume Builder")
+    print("=" * 50)
 
-print("1. LLM RAG")
-print("2. CNN")
-print("3. Sentiment Analysis")
-print("4. Recommendation System")
+    company = input("Company Name : ").strip()
+    role = input("Job Role / Job ID : ").strip()
 
-project1 = int(input("Select Project 1 : "))
-project2 = int(input("Select Project 2 : "))
+    # -------------------- Projects --------------------
+    print("\nSelect Project 1")
+    print("1. AI PM Assistant (RAG)")
+    print("2. Req2Arch")
+    print("3. CNN Image Classification")
+    print("4. Sentiment Analysis")
 
-print("\nSkill Set")
+    project1 = int(input("Choice : "))
 
-print("1. AIML")
-print("2. Data Analytics")
-print("3. LLM")
-print("4. Full Stack")
+    print("\nSelect Project 2")
+    print("1. AI PM Assistant (RAG)")
+    print("2. Req2Arch")
+    print("3. CNN Image Classification")
+    print("4. Sentiment Analysis")
 
-skill = int(input("Select Skill : "))
+    project2 = int(input("Choice : "))
 
-tex_path = build_resume(
-    company,
-    role,
-    project1,
-    project2,
-    skill
-)
+    # -------------------- Skills --------------------
+    print("\nSelect Skill Set")
+    print("1. AI / Machine Learning")
+    print("2. Data Analytics")
+    print("3. LLM / Generative AI")
+    print("4. Full Stack")
 
-compile_pdf(tex_path, company, role)
+    skill = int(input("Choice : "))
+
+    # -------------------- Build Resume --------------------
+    tex_path = build_resume(
+        company=company,
+        role=role,
+        project1=project1,
+        project2=project2,
+        skill=skill
+    )
+
+    # -------------------- Compile PDF --------------------
+    compile_pdf(tex_path, company, role)
+
+    print("\nResume Generated Successfully!")
+
+
+if __name__ == "__main__":
+    main()
