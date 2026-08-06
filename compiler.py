@@ -23,15 +23,31 @@ def compile_pdf(tex_path, company, role):
         exist_ok=True
     )
 
-    subprocess.run(
-        [
-            LATEX_COMPILER,
-            "-interaction=nonstopmode",
-            f"-output-directory={OUTPUT_PDF}",
-            str(tex_path)
-        ],
-        check=True
+    # subprocess.run(
+    #     [
+    #         LATEX_COMPILER,
+    #         "-interaction=nonstopmode",
+    #         f"-output-directory={OUTPUT_PDF}",
+    #         str(tex_path)
+    #     ],
+    #     check=True
+    # )
+    result = subprocess.run(
+    [
+        LATEX_COMPILER,
+        "-interaction=nonstopmode",
+        f"-output-directory={OUTPUT_PDF}",
+        str(tex_path)
+    ],
+    text=True
     )
+
+    if result.returncode != 0:
+        print()
+        print("=" * 60)
+        print("WARNING : LaTeX returned warnings/errors.")
+        print("A PDF may still have been generated.")
+        print("=" * 60)
 
     pdf = OUTPUT_PDF / "resume.pdf"
 
