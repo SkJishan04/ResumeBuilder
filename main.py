@@ -1,54 +1,41 @@
 from builder import build_resume
 from compiler import compile_pdf
 
+from sections.projects import show_projects
+from sections.skills import show_skills
+
 
 def main():
-    print("=" * 50)
-    print("        Resume Builder")
-    print("=" * 50)
+
+    print("=" * 60)
+    print("Resume Builder")
+    print("=" * 60)
 
     company = input("Company Name : ").strip()
-    role = input("Job Role / Job ID : ").strip()
+    role = input("Job Role / ID : ").strip()
 
-    # -------------------- Projects --------------------
-    print("\nSelect Project 1")
-    print("1. AI PM Assistant (RAG)")
-    print("2. Req2Arch")
-    print("3. CNN Image Classification")
-    print("4. Sentiment Analysis")
+    show_projects()
+    project1 = int(input("Select Project 1 : "))
 
-    project1 = int(input("Choice : "))
+    show_projects()
+    project2 = int(input("Select Project 2 : "))
 
-    print("\nSelect Project 2")
-    print("1. AI PM Assistant (RAG)")
-    print("2. Req2Arch")
-    print("3. CNN Image Classification")
-    print("4. Sentiment Analysis")
+    show_skills()
+    skill = int(input("Select Skill Set : "))
 
-    project2 = int(input("Choice : "))
-
-    # -------------------- Skills --------------------
-    print("\nSelect Skill Set")
-    print("1. AI / Machine Learning")
-    print("2. Data Analytics")
-    print("3. LLM / Generative AI")
-    print("4. Full Stack")
-
-    skill = int(input("Choice : "))
-
-    # -------------------- Build Resume --------------------
     tex_path = build_resume(
-        company=company,
-        role=role,
-        project1=project1,
-        project2=project2,
-        skill=skill
+        company,
+        role,
+        project1,
+        project2,
+        skill
     )
 
-    # -------------------- Compile PDF --------------------
-    compile_pdf(tex_path, company, role)
-
-    print("\nResume Generated Successfully!")
+    compile_pdf(
+        tex_path,
+        company,
+        role
+    )
 
 
 if __name__ == "__main__":
