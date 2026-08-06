@@ -16,6 +16,11 @@ def build_resume(company, role, project1, project2, technology):
     template = read_tex("resume_template.tex")
 
     template = template.replace(
+        "{{PREAMBLE}}",
+        read_tex("preamble.tex")
+    )
+
+    template = template.replace(
         "{{HEADER}}",
         read_tex("header.tex")
     )
