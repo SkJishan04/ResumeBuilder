@@ -2,7 +2,7 @@ from pathlib import Path
 
 from config import TEMPLATE_DIR, OUTPUT_TEX
 from sections.projects import get_project
-from sections.skills import get_skill
+from sections.skills import get_technology as get_skill
 
 
 def read_tex(filename):
@@ -11,7 +11,7 @@ def read_tex(filename):
     )
 
 
-def build_resume(company, role, project1, project2, skill):
+def build_resume(company, role, project1, project2, technology):
 
     template = read_tex("resume_template.tex")
 
@@ -50,7 +50,7 @@ def build_resume(company, role, project1, project2, skill):
 
     template = template.replace(
     "{{TECHNOLOGIES}}",
-    get_skill(skill)
+    get_skill(technology)
 )
 
     OUTPUT_TEX.mkdir(

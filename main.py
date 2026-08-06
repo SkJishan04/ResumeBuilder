@@ -2,7 +2,7 @@ from builder import build_resume
 from compiler import compile_pdf
 
 from sections.projects import show_projects
-from sections.skills import show_skills
+from sections.skills import show_technologies as show_skills
 
 
 def main():
@@ -21,14 +21,14 @@ def main():
     project2 = int(input("Select Project 2 : "))
 
     show_skills()
-    skill = int(input("Select Skill Set : "))
+    technology = int(input("Select Technology Profile : "))
 
     tex_path = build_resume(
         company,
         role,
         project1,
         project2,
-        skill
+        technology
     )
 
     compile_pdf(
