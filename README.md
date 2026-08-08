@@ -405,3 +405,27 @@ pdflatex --version
 You should see the installed pdfTeX/MiKTeX version.
 
 ---
+
+# Configuration
+
+The LaTeX compiler path is configured in:
+
+```text
+config.py
+```
+
+Example:
+
+```python
+LATEX_COMPILER = r"C:\Users\<username>\AppData\Local\Programs\MiKTeX\miktex\bin\x64\pdflatex.exe"
+```
+
+If `pdflatex` is already available through the system PATH, the project can also use:
+
+```python
+LATEX_COMPILER = "pdflatex"
+```
+
+For portability, the compiler path should ideally be configurable rather than hard-coded to a specific user's Windows directory.
+
+---
