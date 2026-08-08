@@ -851,3 +851,65 @@ Compilation
 ```
 
 ---
+
+# Project Goal
+
+The goal of Resume Builder is not to create a complex resume-management platform.
+
+The goal is to automate a repetitive task:
+
+```text
+Manual Resume Editing
+        ↓
+Repeatedly modify projects
+        ↓
+Repeatedly modify technologies
+        ↓
+Save another .tex file
+        ↓
+Compile
+        ↓
+Rename PDF
+        ↓
+Upload
+```
+
+into:
+
+```text
+Company
+   +
+Role
+   +
+Project Selection
+   +
+Technology Selection
+        ↓
+   Resume Builder
+        ↓
+    LaTeX File
+        ↓
+     pdfLaTeX
+        ↓
+ Job-Specific PDF
+```
+
+---
+
+# License
+
+This project is intended for personal and educational use.
+
+If you publish or reuse the project, update this section according to the license you choose.
+
+---
+
+# Author
+
+**Sk Jishan**
+
+B.Tech — Computer Science and Engineering
+
+GitHub: [Add GitHub profile]
+
+LinkedIn: [Add LinkedIn profile]
