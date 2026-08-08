@@ -910,6 +910,5 @@ If you publish or reuse the project, update this section according to the licens
 
 B.Tech — Computer Science and Engineering
 
-GitHub: [Add GitHub profile]
 
-LinkedIn: [Add LinkedIn profile]
+LinkedIn: [\[Add LinkedIn profile\]](https://www.linkedin.com/in/sk-jishan/)
