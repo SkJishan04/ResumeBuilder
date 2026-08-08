@@ -247,3 +247,37 @@ MiKTeX + pdfLaTeX
 ```
 
 ---
+
+# LaTeX Template Design
+
+The main template acts as the skeleton of the resume.
+
+Conceptually:
+
+```latex
+\documentclass[...]
+
+{{PREAMBLE}}
+
+\begin{document}
+
+{{HEADER}}
+
+{{EDUCATION}}
+
+{{EXPERIENCE}}
+
+{{CODING_PROFILES}}
+
+{{PROJECTS}}
+
+{{TECHNOLOGIES}}
+
+\end{document}
+```
+
+The Python application replaces these placeholders with the appropriate `.tex` content.
+
+This allows the fixed resume structure to remain unchanged while projects and technology profiles can be swapped dynamically.
+
+---
