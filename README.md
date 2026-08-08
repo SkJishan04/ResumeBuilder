@@ -227,3 +227,23 @@ Current profiles:
 The project uses Python `match/case` to map selections to the corresponding `.tex` files.
 
 ---
+
+## 4. LaTeX Compiler
+
+`compiler.py`
+
+Responsible for:
+
+- Calling `pdflatex`
+- Creating the PDF
+- Creating the output directory
+- Generating the final filename
+- Adding company, role/job ID, and date to the filename
+
+The compiler used by this project is:
+
+```text
+MiKTeX + pdfLaTeX
+```
+
+---
