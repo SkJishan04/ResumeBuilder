@@ -306,3 +306,38 @@ coding_profiles.tex
 
 ---
 
+## Dynamic Sections
+
+These sections change according to the job:
+
+```text
+Projects
+Technology Profile
+```
+
+Projects are stored individually:
+
+```text
+projects/
+├── rag.tex
+├── req2arch.tex
+├── cnn.tex
+├── sentiment.tex
+├── expense_tracker.tex
+└── transcription.tex
+```
+
+Technology profiles are also stored individually:
+
+```text
+skills/
+├── aiml.tex
+├── llm.tex
+├── data_analytics.tex
+└── fullstack.tex
+```
+
+This makes it easy to add or modify content without changing the core Python application.
+
+---
+
