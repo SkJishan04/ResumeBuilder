@@ -618,3 +618,68 @@ case 5:
 ```
 
 ---
+
+# Why This Approach?
+
+The main goal of this project is to avoid manually editing a LaTeX resume for every job application.
+
+Instead of repeatedly modifying:
+
+```text
+Projects
+Skills
+Technologies
+```
+
+the content is modularized.
+
+For example:
+
+```text
+Job A
+    ├── RAG
+    ├── Req2Arch
+    └── LLM Profile
+
+Job B
+    ├── CNN
+    ├── Sentiment Analysis
+    └── AI/ML Profile
+
+Job C
+    ├── Expense Tracker
+    ├── Req2Arch
+    └── Full Stack Profile
+```
+
+The core resume remains unchanged.
+
+---
+
+# Design Principles
+
+The project intentionally keeps the first version simple.
+
+### No database
+
+Resume components are stored as `.tex` files.
+
+### No frontend
+
+The current interface is terminal-based.
+
+### No LLM
+
+Selections are currently manual.
+
+### No external API
+
+The application works locally.
+
+### Modular LaTeX
+
+Projects and technology profiles are independent files.
+
+This makes the project easy to understand, maintain, and extend.
+
+---
