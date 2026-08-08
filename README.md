@@ -281,3 +281,28 @@ The Python application replaces these placeholders with the appropriate `.tex` c
 This allows the fixed resume structure to remain unchanged while projects and technology profiles can be swapped dynamically.
 
 ---
+
+# Fixed vs Dynamic Content
+
+## Fixed Sections
+
+These sections remain the same for every generated resume:
+
+```text
+Header
+Education
+Experience
+Coding Profiles
+```
+
+They are stored separately as:
+
+```text
+header.tex
+education.tex
+experience.tex
+coding_profiles.tex
+```
+
+---
+
