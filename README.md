@@ -486,3 +486,37 @@ Select Technology Profile :
 The application then generates and compiles the resume automatically.
 
 ---
+
+# Example
+
+Suppose the input is:
+
+```text
+Company Name : Google
+Job Role / ID : ML-Engineer-01
+
+Project 1 : AI PM Assistant (RAG)
+Project 2 : CNN Image Classification
+
+Technology Profile : AI / Machine Learning
+```
+
+The application creates a resume containing:
+
+```text
+Fixed Sections
+    +
+AI PM Assistant (RAG)
+    +
+CNN Image Classification
+    +
+AI / Machine Learning Technologies
+```
+
+and generates:
+
+```text
+Sk_Jishan_Google_ML-Engineer-01_2026-08-07.pdf
+```
+
+---
