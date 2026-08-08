@@ -341,3 +341,17 @@ This makes it easy to add or modify content without changing the core Python app
 
 ---
 
+# Requirements
+
+## Software
+
+You need:
+
+- Python 3.x
+- MiKTeX
+- pdfLaTeX
+
+The Python program uses the local `pdflatex.exe` executable to compile the generated `.tex` file.
+
+---
+
