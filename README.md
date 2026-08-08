@@ -587,3 +587,34 @@ case 7:
 The new project will then become available from the terminal.
 
 ---
+
+# Adding a New Technology Profile
+
+The same approach can be used for technologies.
+
+For example:
+
+```text
+templates/skills/cloud_devops.tex
+```
+
+Add it to the dictionary:
+
+```python
+SKILLS = {
+    1: "AI / Machine Learning",
+    2: "LLM / Generative AI",
+    3: "Data Analytics",
+    4: "Full Stack",
+    5: "Cloud / DevOps"
+}
+```
+
+Then add:
+
+```python
+case 5:
+    return load_tex("templates/skills/cloud_devops.tex")
+```
+
+---
