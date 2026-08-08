@@ -136,3 +136,20 @@ ResumeBuilder/
 ```
 
 ---
+# Architecture
+
+The project has four main layers.
+
+## 1. User Interface
+
+`main.py`
+
+Responsible for:
+
+- Taking user input
+- Displaying available projects
+- Displaying available technology profiles
+- Passing selections to the builder
+- Starting PDF compilation
+
+---
