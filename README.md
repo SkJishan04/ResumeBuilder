@@ -191,3 +191,39 @@ resume_template.tex
 ```
 
 ---
+
+## 3. Project & Technology Selection
+
+`sections/projects.py`
+
+Contains the available projects and maps each selection to a LaTeX file.
+
+Current projects:
+
+```text
+1. AI PM Assistant (RAG)
+2. Req2Arch
+3. CNN Image Classification
+4. Sentiment Analysis
+5. Expense Tracker
+6. Automated Transcription System
+```
+
+---
+
+`sections/skills.py`
+
+Contains the available technology profiles.
+
+Current profiles:
+
+```text
+1. AI / Machine Learning
+2. LLM / Generative AI
+3. Data Analytics
+4. Full Stack
+```
+
+The project uses Python `match/case` to map selections to the corresponding `.tex` files.
+
+---
