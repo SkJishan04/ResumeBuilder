@@ -824,3 +824,30 @@ A graphical interface could replace the terminal:
 ```
 
 ---
+
+# Tech Stack
+
+```text
+Language
+    Python
+
+Resume Format
+    LaTeX
+
+Compiler
+    pdfLaTeX
+
+LaTeX Distribution
+    MiKTeX
+
+Interface
+    Command Line / Terminal
+
+File Handling
+    Python pathlib
+
+Compilation
+    Python subprocess
+```
+
+---
