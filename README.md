@@ -29,3 +29,18 @@ This project separates the resume into:
 The Python program combines these components and produces a job-specific PDF.
 
 ---
+## Features
+
+- Generate a customized resume from the terminal
+- Select two projects dynamically
+- Select a technology/skill profile dynamically
+- Keep education, experience, and coding profiles unchanged
+- Store projects as separate `.tex` files
+- Store technology profiles as separate `.tex` files
+- Use a reusable LaTeX template
+- Automatically compile LaTeX using `pdflatex`
+- Automatically generate a dated PDF filename
+- Keep generated `.tex` and `.pdf` files organized
+- Easily add new projects and technology profiles
+
+---
