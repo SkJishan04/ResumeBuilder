@@ -355,3 +355,53 @@ The Python program uses the local `pdflatex.exe` executable to compile the gener
 
 ---
 
+# Installation
+
+## 1. Clone the repository
+
+```bash
+git clone <YOUR_GITHUB_REPOSITORY_URL>
+cd ResumeBuilder
+```
+
+---
+
+## 2. Create a virtual environment
+
+Windows:
+
+```powershell
+python -m venv venv
+```
+
+Activate it:
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+---
+
+## 3. Install Python dependencies
+
+```powershell
+pip install -r requirements.txt
+```
+
+The current project is intentionally lightweight and primarily uses Python's standard library.
+
+---
+
+## 4. Install MiKTeX
+
+Install MiKTeX on your system and make sure `pdflatex` is available.
+
+Verify:
+
+```powershell
+pdflatex --version
+```
+
+You should see the installed pdfTeX/MiKTeX version.
+
+---
