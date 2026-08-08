@@ -153,3 +153,41 @@ Responsible for:
 - Starting PDF compilation
 
 ---
+
+## 2. Resume Builder
+
+`builder.py`
+
+Responsible for:
+
+- Loading the master LaTeX template
+- Loading fixed resume sections
+- Loading selected projects
+- Loading the selected technology profile
+- Replacing placeholders
+- Creating the final `resume.tex`
+
+Conceptually:
+
+```text
+resume_template.tex
+        |
+        +── header.tex
+        |
+        +── education.tex
+        |
+        +── experience.tex
+        |
+        +── coding_profiles.tex
+        |
+        +── selected project 1
+        |
+        +── selected project 2
+        |
+        +── selected technology profile
+        |
+        v
+    resume.tex
+```
+
+---
