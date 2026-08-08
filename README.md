@@ -708,3 +708,119 @@ Other limitations include:
 
 ---
 
+
+# Future Improvements
+
+Possible future versions can introduce progressively more automation.
+
+## Version 2 — Better CLI
+
+Add:
+
+- Input validation
+- Prevent selecting the same project twice
+- Better error handling
+- Cleaner menus
+- Automatic cleanup of temporary LaTeX files
+
+---
+
+## Version 3 — Job Description Matching
+
+Allow the user to provide a job description:
+
+```text
+Enter Job Description:
+```
+
+The application could analyze keywords such as:
+
+```text
+Python
+PyTorch
+TensorFlow
+RAG
+LLM
+SQL
+Power BI
+React
+Django
+Docker
+AWS
+```
+
+and recommend:
+
+```text
+Project 1 → CNN
+Project 2 → RAG
+Technology → AI/ML
+```
+
+---
+
+## Version 4 — LLM-Powered Resume Customization
+
+An LLM could analyze:
+
+```text
+Job Description
+        +
+Available Projects
+        +
+Available Technology Profiles
+```
+
+and recommend the strongest combination.
+
+For example:
+
+```text
+Job Description
+       |
+       v
+   LLM Analysis
+       |
+       +----> Required Skills
+       |
+       +----> Recommended Projects
+       |
+       +----> Recommended Technology Profile
+       |
+       v
+   Resume Builder
+       |
+       v
+     PDF
+```
+
+---
+
+## Version 5 — GUI
+
+A graphical interface could replace the terminal:
+
+```text
++---------------------------------------+
+|          Resume Builder               |
++---------------------------------------+
+| Company                               |
+| [ Google                         ]    |
+|                                       |
+| Role / Job ID                         |
+| [ ML Engineer                    ]    |
+|                                       |
+| Project 1                             |
+| [ AI PM Assistant (RAG) ▼       ]    |
+|                                       |
+| Project 2                             |
+| [ CNN Image Classification ▼    ]    |
+|                                       |
+| Technology Profile                    |
+| [ AI / Machine Learning ▼        ]   |
+|                                       |
+|          [ Generate Resume ]          |
++---------------------------------------+
+```
+
+---
