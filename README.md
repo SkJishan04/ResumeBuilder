@@ -44,3 +44,47 @@ The Python program combines these components and produces a job-specific PDF.
 - Easily add new projects and technology profiles
 
 ---
+
+## Current Workflow
+
+```text
+                    Resume Builder
+                          |
+                          v
+                Enter Company Name
+                          |
+                          v
+                  Enter Job Role / ID
+                          |
+                          v
+                  Select Project 1
+                          |
+                          v
+                  Select Project 2
+                          |
+                          v
+              Select Technology Profile
+                          |
+                          v
+                  Build resume.tex
+                          |
+                          v
+                    pdflatex
+                          |
+                          v
+                    Resume PDF
+```
+
+The generated filename follows:
+
+```text
+<NAME>_<COMPANY>_<ROLE>_<DATE>.pdf
+```
+
+For example:
+
+```text
+Sk_Jishan_abc_abc123_2026-08-07.pdf
+```
+
+---
