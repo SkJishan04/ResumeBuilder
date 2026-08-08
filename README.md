@@ -429,3 +429,60 @@ LATEX_COMPILER = "pdflatex"
 For portability, the compiler path should ideally be configurable rather than hard-coded to a specific user's Windows directory.
 
 ---
+
+# Running the Application
+
+Run:
+
+```powershell
+python main.py
+```
+
+You will see:
+
+```text
+============================================================
+Resume Builder
+============================================================
+
+Company Name :
+Job Role / ID :
+```
+
+Enter the company and role.
+
+Then select two projects:
+
+```text
+Available Projects
+----------------------------------------
+1. AI PM Assistant (RAG)
+2. Req2Arch
+3. CNN Image Classification
+4. Sentiment Analysis
+5. Expense Tracker
+6. Automated Transcription System
+----------------------------------------
+
+Select Project 1 :
+```
+
+Then select Project 2.
+
+Finally select the technology profile:
+
+```text
+Available Skill Sets
+----------------------------------------
+1. AI / Machine Learning
+2. LLM / Generative AI
+3. Data Analytics
+4. Full Stack
+----------------------------------------
+
+Select Technology Profile :
+```
+
+The application then generates and compiles the resume automatically.
+
+---
