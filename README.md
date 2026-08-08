@@ -548,3 +548,42 @@ output/
 ```
 
 ---
+
+# Adding a New Project
+
+To add a new project:
+
+### 1. Create the LaTeX file
+
+For example:
+
+```text
+templates/projects/new_project.tex
+```
+
+### 2. Add it to `projects.py`
+
+Add a new entry:
+
+```python
+PROJECTS = {
+    1: "AI PM Assistant (RAG)",
+    2: "Req2Arch",
+    3: "CNN Image Classification",
+    4: "Sentiment Analysis",
+    5: "Expense Tracker",
+    6: "Automated Transcription System",
+    7: "New Project"
+}
+```
+
+### 3. Add the corresponding `match/case`
+
+```python
+case 7:
+    return load_tex("templates/projects/new_project.tex")
+```
+
+The new project will then become available from the terminal.
+
+---
