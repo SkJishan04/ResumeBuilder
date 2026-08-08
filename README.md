@@ -88,3 +88,51 @@ Sk_Jishan_abc_abc123_2026-08-07.pdf
 ```
 
 ---
+
+# Project Structure
+
+```text
+ResumeBuilder/
+│
+├── main.py
+├── builder.py
+├── compiler.py
+├── config.py
+├── requirements.txt
+├── README.md
+│
+├── sections/
+│   ├── projects.py
+│   └── skills.py
+│
+├── templates/
+│   ├── resume_template.tex
+│   ├── preamble.tex
+│   ├── header.tex
+│   ├── education.tex
+│   ├── experience.tex
+│   ├── coding_profiles.tex
+│   │
+│   ├── projects/
+│   │   ├── rag.tex
+│   │   ├── req2arch.tex
+│   │   ├── cnn.tex
+│   │   ├── sentiment.tex
+│   │   ├── expense_tracker.tex
+│   │   └── transcription.tex
+│   │
+│   └── skills/
+│       ├── aiml.tex
+│       ├── llm.tex
+│       ├── data_analytics.tex
+│       └── fullstack.tex
+│
+└── output/
+    ├── tex/
+    │   └── resume.tex
+    │
+    └── pdf/
+        └── generated_resume.pdf
+```
+
+---
