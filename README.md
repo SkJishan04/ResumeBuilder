@@ -683,3 +683,28 @@ Projects and technology profiles are independent files.
 This makes the project easy to understand, maintain, and extend.
 
 ---
+
+# Current Limitations
+
+The current version requires manually selecting:
+
+```text
+Project 1
+Project 2
+Technology Profile
+```
+
+It also currently assumes that the user maintains the LaTeX content manually.
+
+Other limitations include:
+
+- No automatic job-description analysis
+- No automatic project recommendation
+- No GUI
+- No duplicate-project prevention
+- No ranking of projects based on job requirements
+- Compiler configuration is currently machine-dependent
+- Generated auxiliary LaTeX files may need cleanup
+
+---
+
