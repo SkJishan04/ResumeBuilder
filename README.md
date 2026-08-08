@@ -520,3 +520,31 @@ Sk_Jishan_Google_ML-Engineer-01_2026-08-07.pdf
 ```
 
 ---
+
+# Output
+
+Generated LaTeX files are stored in:
+
+```text
+output/tex/
+```
+
+The generated PDF is stored in:
+
+```text
+output/pdf/
+```
+
+Example:
+
+```text
+output/
+│
+├── tex/
+│   └── resume.tex
+│
+└── pdf/
+    └── Sk_Jishan_Google_ML-Engineer-01_2026-08-07.pdf
+```
+
+---
