@@ -911,4 +911,4 @@ If you publish or reuse the project, update this section according to the licens
 B.Tech — Computer Science and Engineering
 
 
-LinkedIn: [\[Add LinkedIn profile\]](https://www.linkedin.com/in/sk-jishan/)
+LinkedIn: [\[Sk Jishan\]](https://www.linkedin.com/in/sk-jishan/)
